@@ -75,8 +75,8 @@ class TTTEngine {
 
     }
 
-    public static void main(String [] args){
-        int n = 3;
+    public static void intitTTT(String [] args, int n){
+        //Initialize
         char[][] arr = new char[n][n];
         for(int i = 0; i < n; i++){
             for( int j = 0; j < n; j++){
@@ -84,7 +84,6 @@ class TTTEngine {
             }
         }
         print(arr);
-        
         runTwoPlayer(arr);
 
     }
