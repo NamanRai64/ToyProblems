@@ -5,15 +5,15 @@ public class TileBoard {
     int n=3;
     public void printBoard() {
         for (int i = 0; i < n; i++) {
-            
+
             for (int j = 0; j < n; j++) {
                 System.out.print("+---");
             }
-                System.out.println("+");
+            System.out.println("+");
             for (int j = 0; j < n; j++) {
                 System.out.print("| " + board[i][j] + " ");
             }
-                System.out.println("|"); 
+            System.out.println("|");
         }
         System.out.println("+---+---+---+");
     }
@@ -29,7 +29,7 @@ public class TileBoard {
         int cols = board[0].length;
         int size = rows * cols;
         Random rand = new Random();
-        
+
         for (int i=size-1; i>0; i--) {
             int j = rand.nextInt(i + 1);
 
@@ -43,7 +43,7 @@ public class TileBoard {
         System.out.println("+-----------------------------------------------------------------------------------+");
         System.out.println("|                                                                                   |");
         System.out.println("|   Welcome to the 8-Tile Puzzle!                                                   |");
-        System.out.println("|   ==============================                       +---+---+---+              |");                
+        System.out.println("|   ==============================                       +---+---+---+              |");
         System.out.println("|   How to Play:                                         | 1 | 2 | 3 |              |");
         System.out.println("|   Use the following commands to move the tiles:        +---+---+---+              |");
         System.out.println("|   w - Move Up                                          | 4 | 5 | 6 |              |");

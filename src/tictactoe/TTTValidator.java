@@ -59,23 +59,23 @@ public class TTTValidator {
 
         return false;
     }
-    
-   public static boolean draw(char[][] arr){
 
-    int n = arr.length;
+    public static boolean draw(char[][] arr){
 
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            if(arr[i][j] == '_'){
-                return false;   
+        int n = arr.length;
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                if(arr[i][j] == '_'){
+                    return false;
+                }
             }
         }
-    }
 
-    if(!validate(arr)){
-        return true;  
-    }
+        if(!validate(arr)){
+            return true;
+        }
 
-    return false;
-}
+        return false;
+    }
 }
