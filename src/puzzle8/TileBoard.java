@@ -1,4 +1,6 @@
 package puzzle8;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 public class TileBoard {
     char[][] board;
@@ -20,24 +22,10 @@ public class TileBoard {
     public void tileBoardInit() {
         board = new char[][]{{'1','2','3'},{'4','5','6'},{'7','8','-'}};
         instructions();
-        shuffleBoard();
         System.out.println("\nShuffled Board:\n===========================================================================================");
-        printBoard();
-    }
-    private void shuffleBoard() {
-        int rows = board.length;
-        int cols = board[0].length;
-        int size = rows * cols;
-        Random rand = new Random();
 
-        for (int i=size-1; i>0; i--) {
-            int j = rand.nextInt(i + 1);
-
-            char temp = board[i / cols][i % cols];
-            board[i / cols][i % cols] = board[j / cols][j % cols];
-            board[j / cols][j % cols] = temp;
-        }
     }
+
     public void instructions() {
         System.out.println("Instructinons for puzzle8: ");
         System.out.println("+-----------------------------------------------------------------------------------+");
