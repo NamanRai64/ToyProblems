@@ -26,7 +26,7 @@ public class TileBoard {
 
     }
 
-    public void instructions() {
+    private void instructions() {
         System.out.println("Instructinons for puzzle8: ");
         System.out.println("+-----------------------------------------------------------------------------------+");
         System.out.println("|                                                                                   |");
