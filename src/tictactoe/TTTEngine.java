@@ -15,6 +15,11 @@ class TTTEngine {
             System.out.println("Player 1(X):");
             move = false;
             while (!move) {
+                if (!sc.hasNextInt()) {
+                    System.out.println("Enter a valid number.");
+                    sc.next();
+                    continue;
+                }
                 int choice = sc.nextInt();
                 int row = (choice - 1) / n;
                 int col = (choice - 1) % n;
@@ -48,6 +53,12 @@ class TTTEngine {
             System.out.println("Player 2(O):");
             move = false;
             while (!move) {
+                
+                if (!sc.hasNextInt()) {
+                    System.out.println("Enter a valid number.");
+                    sc.next();
+                    continue;
+                }
 
                 int choice = sc.nextInt();
                 int row = (choice - 1) / n;
@@ -102,5 +113,10 @@ class TTTEngine {
 
     }
 
+    // public static void main(String[] args){
+    //     int n  = 3;
+    //     char[][] arr = new char[n][n];
+    //     initTTT(arr, n);
+    // }
 
 }
