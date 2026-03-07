@@ -23,6 +23,7 @@ class TTTEngine {
                 int choice = sc.nextInt();
                 int row = (choice - 1) / n;
                 int col = (choice - 1) % n;
+    
                 if (choice > 0 && choice <= n * n) {
 
                     if (arr[row][col] == '_') {
@@ -33,6 +34,9 @@ class TTTEngine {
                         System.out.println("Invalid Move");
                         move = false;
                     }
+                }
+                else{
+                    System.out.println("Enter a valid number.");
                 }
             }
 
@@ -73,6 +77,9 @@ class TTTEngine {
                         move = false;
                     }
                 }
+                 else{
+                    System.out.println("Enter a valid number.");
+                }
             }
             print(arr);
             if (TTTValidator.validate(arr)) {
@@ -90,16 +97,48 @@ class TTTEngine {
         // }
     }
 
-    public static void print(char[][] arr) {
-        int n = arr.length;
-        for (int i = 0; i < n; i++) {
+public static void print(char[][] arr) {
+    int n = arr.length;
+
+    System.out.println();
+
+    for (int i = 0; i < n; i++) {
+
+        if (i == 0) {
+            System.out.print("┌");
             for (int j = 0; j < n; j++) {
-                System.out.print(arr[i][j] + " ");
+                System.out.print("───");
+                if (j < n - 1) System.out.print("┬");
             }
-            System.out.println();
+            System.out.println("┐");
         }
 
+        for (int j = 0; j < n; j++) {
+            if (j == 0) System.out.print("│");
+            System.out.print(" " + arr[i][j] + " │");
+        }
+
+        System.out.println();
+
+        if (i < n - 1) {
+            System.out.print("├");
+            for (int j = 0; j < n; j++) {
+                System.out.print("───");
+                if (j < n - 1) System.out.print("┼");
+            }
+            System.out.println("┤");
+        }
     }
+
+    System.out.print("└");
+    for (int j = 0; j < n; j++) {
+        System.out.print("───");
+        if (j < n - 1) System.out.print("┴");
+    }
+    System.out.println("┘");
+
+    System.out.println();
+}
 
     public static void initTTT(char[][] arr, int n) {
         // Initialize
@@ -113,10 +152,5 @@ class TTTEngine {
 
     }
 
-    // public static void main(String[] args){
-    //     int n  = 3;
-    //     char[][] arr = new char[n][n];
-    //     initTTT(arr, n);
-    // }
 
 }
