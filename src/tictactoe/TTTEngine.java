@@ -101,6 +101,11 @@ class TTTEngine {
         runTwoPlayer(arr);
 
     }
+    public  static void main(String[] args){
+        int n = 3;
+        char[][] arr = new char[n][n];
+        initTTT(arr, n);
+    }
 
 
 }

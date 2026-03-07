@@ -1,28 +1,28 @@
 package tictactoe;
 
 public class TTTBoard {
-        char[][] board;
-        int n=3;
-        public void printBoard() {
-            for (int i = 0; i < n; i++) {
+    char[][] board;
+    int n=3;
+    public void printBoard() {
+        for (int i = 0; i < n; i++) {
 
-                for (int j = 0; j < n; j++) {
-                    System.out.print("+---");
-                }
-                System.out.println("+");
-                for (int j = 0; j < n; j++) {
-                    System.out.print("| " + board[i][j] + " ");
-                }
-                System.out.println("|");
+            for (int j = 0; j < n; j++) {
+                System.out.print("+---");
             }
-            System.out.println("+---+---+---+");
+            System.out.println("+");
+            for (int j = 0; j < n; j++) {
+                System.out.print("| " + board[i][j] + " ");
+            }
+            System.out.println("|");
         }
-        public void tileBoardInit() {
-            board = new char[][]{{' ',' ',' '},{' ',' ',' '},{' ',' ',' '}};
-            instructions();
-            System.out.println("\nShuffled Board:\n===========================================================================================");
+        System.out.println("+---+---+---+");
+    }
+    public void tileBoardInit() {
+        board = new char[][]{{' ',' ',' '},{' ',' ',' '},{' ',' ',' '}};
+        instructions();
+        System.out.println("\nShuffled Board:\n===========================================================================================");
 
-        }
+    }
     private void instructions() {
         System.out.println("Instructions for Tic-Tac-Toe: ");
         System.out.println("+-----------------------------------------------------------------------------------+");
