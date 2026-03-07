@@ -7,35 +7,50 @@ public class CannibalsBoard {
         String initShore="2C2M",finalShore="2C2M";
         char[] boat ={'M','C'};
         System.out.println("+----------------------------------------------------------------------------------+\n"+
-        "|                                                                                  |\n"+
+                           "|                                                                                  |\n"+
         "|    "+initShore+"                                                                 "+finalShore+"     |\n"+
         "|                                                                                  |\n"+
-        "| M M M C C C    \\__"+boat[0]+"__"+boat[1]+"__/                                                       |\n"+
+        "| M M M C C C    \\__"+boat[0]+"__"+boat[1]+"__/                                                        |\n"+
         "|████████████████==================================================████████████████|\n"+
         "|███████████████████============================================███████████████████|\n"+
         "+----------------------------------------------------------------------------------+");
     }
     private static void instructions() {
-        System.out.println("Instructions for Missionaries and Cannibals: ");
-        System.out.println("+----------------------------------------------------------------------------------------+");
-        System.out.println("|                                                                                        |");
-        System.out.println("|   Welcome to the River Crossing Challenge!                                             |");
-        System.out.println("|   ========================================                (M M M)  |~~~~|  (     )     |");
-        System.out.println("|   How to Play:                                            (C C C)  |~~~~|              |");
-        System.out.println("|   1. Move 3 Missionaries and 3 Cannibals across.          (     )  |Boat|  (     )     |");
-        System.out.println("|   2. The boat can carry a maximum of 2 people.            -------  |____|  -------     |");
-        System.out.println("|   3. The boat must have at least 1 person to move.          Left    River   Right      |");
-        System.out.println("|                                                                                        |");
-        System.out.println("|   The Golden Rule:                                                                     |");
-        System.out.println("|   If Cannibals outnumber Missionaries on either bank, the Missionaries are eaten!      |");
-        System.out.println("|                                                                                        |");
-        System.out.println("|   Goal:                                                                                |");
-        System.out.println("|   Get everyone safely to the Right Bank without any casualties.                        |");
-        System.out.println("|                                                                                        |");
-        System.out.println("+----------------------------------------------------------------------------------------+");
+
+        System.out.println("╔══════════════════════════════════════════════════════════════════════════════════════╗");
+        System.out.println("║                     MISSIONARIES AND CANNIBALS – GAME RULES                          ║");
+        System.out.println("╠══════════════════════════════════════════════════════════════════════════════════════╣");
+        System.out.println("║                                                                                      ║");
+        System.out.println("║  Welcome to the River Crossing Challenge!                                            ║");
+        System.out.println("║                                                                                      ║");
+        System.out.println("║  Objective:                                                                          ║");
+        System.out.println("║  Move all 3 Missionaries (M) and 3 Cannibals (C) from the LEFT bank to the RIGHT.    ║");
+        System.out.println("║                                                                                      ║");
+        System.out.println("║  Rules:                                                                              ║");
+        System.out.println("║  1. The boat can carry a maximum of 2 people.                                        ║");
+        System.out.println("║  2. The boat must have at least 1 person to move.                                    ║");
+        System.out.println("║  3. Cannibals must never outnumber Missionaries on either bank.                      ║");
+        System.out.println("║                                                                                      ║");
+        System.out.println("║  ⚠ Golden Rule:                                                                      ║");
+        System.out.println("║  If Cannibals outnumber Missionaries on a bank, the Missionaries will be eaten!      ║");
+        System.out.println("║                                                                                      ║");
+        System.out.println("╠══════════════════════════════════════════════════════════════════════════════════════╣");
+        System.out.println("║                                   GOAL STATE                                         ║");
+        System.out.println("║                                                                                      ║");
+        System.out.println("║   +------------------------------------------------------------------------------+   ║");
+        System.out.println("║   |                                                                             |    ║");
+        System.out.println("║   |    0M0C                                                         3M3C        |    ║");
+        System.out.println("║   |                                                                             |    ║");
+        System.out.println("║   |                        \\______ /                      M M M C C C           |    ║");
+        System.out.println("║   |████████████████====================================█████████████████████████|    ║");
+        System.out.println("║   |███████████████████==============================████████████████████████████|    ║");
+        System.out.println("║   +------------------------------------------------------------------------------+   ║");
+        System.out.println("║                                                                                      ║");
+        System.out.println("╚══════════════════════════════════════════════════════════════════════════════════════╝");
+
         System.out.println();
-        System.out.println("Let's get Started, M-Missionaries and C- Cannibal:");
-        System.out.println("==================================================================================================");
+        System.out.println("Symbols: M = Missionary   C = Cannibal");
+        System.out.println("=======================================================================================");
         System.out.println();
     }
     public static void main(String[] args) {

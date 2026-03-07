@@ -6,18 +6,55 @@ public class TileBoard {
     char[][] board;
     int n=3;
     public void printBoard() {
+
+        System.out.println("  8 - PUZZLE");
+        System.out.println();
+
+        // Top border
+        System.out.print("╔");
+        for (int j = 0; j < n; j++) {
+            System.out.print("════");
+            if (j < n - 1) System.out.print("╦");
+        }
+        System.out.println("╗");
+
         for (int i = 0; i < n; i++) {
 
+            // Tile row
             for (int j = 0; j < n; j++) {
-                System.out.print("+---");
+
+                if (j == 0) System.out.print("║");
+
+                char val = board[i][j];
+
+                if (val == '-')
+                    System.out.printf(" %-2s ", "-");
+                else
+                    System.out.printf(" %-2s ", val);
+
+                System.out.print("║");
             }
-            System.out.println("+");
-            for (int j = 0; j < n; j++) {
-                System.out.print("| " + board[i][j] + " ");
+
+            System.out.println();
+
+            // Middle border
+            if (i < n - 1) {
+                System.out.print("╠");
+                for (int j = 0; j < n; j++) {
+                    System.out.print("════");
+                    if (j < n - 1) System.out.print("╬");
+                }
+                System.out.println("╣");
             }
-            System.out.println("|");
         }
-        System.out.println("+---+---+---+");
+
+        // Bottom border
+        System.out.print("╚");
+        for (int j = 0; j < n; j++) {
+            System.out.print("════");
+            if (j < n - 1) System.out.print("╩");
+        }
+        System.out.println("╝");
     }
     public void tileBoardInit() {
         board = new char[][]{{'1','2','3'},{'4','5','6'},{'7','8','-'}};
