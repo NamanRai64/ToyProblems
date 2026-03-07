@@ -21,12 +21,12 @@ public class TileBoard {
     }
     public void tileBoardInit() {
         board = new char[][]{{'1','2','3'},{'4','5','6'},{'7','8','-'}};
-        instructions();
+        instructionsPuzzle8();
         System.out.println("\nShuffled Board:\n===========================================================================================");
 
     }
 
-    private void instructions() {
+    private void instructionsPuzzle8() {
         System.out.println("Instructinons for puzzle8: ");
         System.out.println("+-----------------------------------------------------------------------------------+");
         System.out.println("|                                                                                   |");

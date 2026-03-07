@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f7925b0-6ccb-419c-af97-c53530236531" name="Changes" comment="added few changes">
-      <change afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cannibals/CannibalEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cannibals/CannibalsBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/puzzle8/TileBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/puzzle8/TileBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tictactoe/TTTBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TTTBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tictactoe/TTTEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tictactoe/TTTEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +37,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CannibalsBoard.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.TTTEngine.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "nr/fix/puzzle8",
+    "git-widget-placeholder": "nr/updated/TTTboard",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/myProjects/ToyProblems",
     "project.structure.last.edited": "Project",
