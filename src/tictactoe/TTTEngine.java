@@ -15,9 +15,15 @@ class TTTEngine {
             System.out.println("Player 1(X):");
             move = false;
             while (!move) {
+                if (!sc.hasNextInt()) {
+                    System.out.println("Enter a valid number.");
+                    sc.next();
+                    continue;
+                }
                 int choice = sc.nextInt();
                 int row = (choice - 1) / n;
                 int col = (choice - 1) % n;
+    
                 if (choice > 0 && choice <= n * n) {
 
                     if (arr[row][col] == '_') {
@@ -28,6 +34,9 @@ class TTTEngine {
                         System.out.println("Invalid Move");
                         move = false;
                     }
+                }
+                else{
+                    System.out.println("Enter a valid number.");
                 }
             }
 
@@ -48,6 +57,12 @@ class TTTEngine {
             System.out.println("Player 2(O):");
             move = false;
             while (!move) {
+                
+                if (!sc.hasNextInt()) {
+                    System.out.println("Enter a valid number.");
+                    sc.next();
+                    continue;
+                }
 
                 int choice = sc.nextInt();
                 int row = (choice - 1) / n;
@@ -61,6 +76,9 @@ class TTTEngine {
                         System.out.println("Invalid Move");
                         move = false;
                     }
+                }
+                 else{
+                    System.out.println("Enter a valid number.");
                 }
             }
             print(arr);
@@ -79,16 +97,48 @@ class TTTEngine {
         // }
     }
 
-    public static void print(char[][] arr) {
-        int n = arr.length;
-        for (int i = 0; i < n; i++) {
+public static void print(char[][] arr) {
+    int n = arr.length;
+
+    System.out.println();
+
+    for (int i = 0; i < n; i++) {
+
+        if (i == 0) {
+            System.out.print("┌");
             for (int j = 0; j < n; j++) {
-                System.out.print(arr[i][j] + " ");
+                System.out.print("───");
+                if (j < n - 1) System.out.print("┬");
             }
-            System.out.println();
+            System.out.println("┐");
         }
 
+        for (int j = 0; j < n; j++) {
+            if (j == 0) System.out.print("│");
+            System.out.print(" " + arr[i][j] + " │");
+        }
+
+        System.out.println();
+
+        if (i < n - 1) {
+            System.out.print("├");
+            for (int j = 0; j < n; j++) {
+                System.out.print("───");
+                if (j < n - 1) System.out.print("┼");
+            }
+            System.out.println("┤");
+        }
     }
+
+    System.out.print("└");
+    for (int j = 0; j < n; j++) {
+        System.out.print("───");
+        if (j < n - 1) System.out.print("┴");
+    }
+    System.out.println("┘");
+
+    System.out.println();
+}
 
     public static void initTTT(char[][] arr, int n) {
         // Initialize
