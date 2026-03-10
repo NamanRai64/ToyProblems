@@ -1,11 +1,8 @@
 package cannibals;
 
-import java.sql.SQLOutput;
 
 public class CannibalsBoard {
-    private static void printBG() {
-        String initShore="2C2M",finalShore="2C2M";
-        char[] boat ={'M','C'};
+    public void printBG(char[] initShore,char[] finalShore,char[] boat) {
         System.out.println("+----------------------------------------------------------------------------------+\n"+
                            "|                                                                                  |\n"+
         "|    "+initShore+"                                                                 "+finalShore+"     |\n"+
@@ -15,7 +12,7 @@ public class CannibalsBoard {
         "|███████████████████============================================███████████████████|\n"+
         "+----------------------------------------------------------------------------------+");
     }
-    private static void instructions() {
+    public void instructions() {
 
         System.out.println("╔══════════════════════════════════════════════════════════════════════════════════════╗");
         System.out.println("║                     MISSIONARIES AND CANNIBALS – GAME RULES                          ║");
@@ -38,24 +35,19 @@ public class CannibalsBoard {
         System.out.println("║                                   GOAL STATE                                         ║");
         System.out.println("║                                                                                      ║");
         System.out.println("║   +------------------------------------------------------------------------------+   ║");
-        System.out.println("║   |                                                                             |    ║");
-        System.out.println("║   |    0M0C                                                         3M3C        |    ║");
-        System.out.println("║   |                                                                             |    ║");
-        System.out.println("║   |                        \\______ /                      M M M C C C           |    ║");
-        System.out.println("║   |████████████████====================================█████████████████████████|    ║");
-        System.out.println("║   |███████████████████==============================████████████████████████████|    ║");
+        System.out.println("║   |                                                                              |   ║");
+        System.out.println("║   |    0M0C                                                         3M3C         |   ║");
+        System.out.println("║   |                                                                              |   ║");
+        System.out.println("║   |                        \\______ /                      M M M C C C            |    ║");
+        System.out.println("║   |███████████████████======================================█████████████████████|   ║");
+        System.out.println("║   |██████████████████████===============================█████████████████████████|   ║");
         System.out.println("║   +------------------------------------------------------------------------------+   ║");
         System.out.println("║                                                                                      ║");
         System.out.println("╚══════════════════════════════════════════════════════════════════════════════════════╝");
 
         System.out.println();
         System.out.println("Symbols: M = Missionary   C = Cannibal");
-        System.out.println("=======================================================================================");
+        System.out.println("=========================================================================================");
         System.out.println();
-    }
-    public static void main(String[] args) {
-
-        instructions();
-        printBG();
     }
 }
