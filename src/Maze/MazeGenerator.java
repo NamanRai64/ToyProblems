@@ -62,9 +62,56 @@ public class MazeGenerator {
         }
     }
 
-    static void printMaze() {
+    static void addLoops(int extraWallsToBreak) {
 
-    // Top border
+    for (int i = 0; i < extraWallsToBreak; i++) {
+
+        int r = rand.nextInt(rows);
+        int c = rand.nextInt(cols);
+
+        int[][] directions = {
+            {0,1},
+            {1,0},
+            {0,-1},
+            {-1,0}
+        };
+
+        int[] d = directions[rand.nextInt(4)];
+
+        int nr = r + d[0];
+        int nc = c + d[1];
+
+        if (nr >= 0 && nr < rows && nc >= 0 && nc < cols) {
+
+            // break right wall
+            if (d[0] == 0 && d[1] == 1) {
+                maze[r][c].right = false;
+                maze[nr][nc].left = false;
+            }
+
+            // break down wall
+            else if (d[0] == 1 && d[1] == 0) {
+                maze[r][c].down = false;
+                maze[nr][nc].up = false;
+            }
+
+            // break left wall
+            else if (d[0] == 0 && d[1] == -1) {
+                maze[r][c].left = false;
+                maze[nr][nc].right = false;
+            }
+
+            // break up wall
+            else if (d[0] == -1 && d[1] == 0) {
+                maze[r][c].up = false;
+                maze[nr][nc].down = false;
+            }
+        }
+    }
+}
+
+    static void printMaze(int playerRow, int playerCol) {
+
     System.out.print("┌");
     for (int c = 0; c < cols; c++) {
         System.out.print("───");
@@ -75,7 +122,6 @@ public class MazeGenerator {
 
     for (int r = 0; r < rows; r++) {
 
-        // Print vertical walls and cells
         for (int c = 0; c < cols; c++) {
 
             if (c == 0) {
@@ -85,15 +131,17 @@ public class MazeGenerator {
                     System.out.print(" ");
             }
 
-            // Print start or end
-            if (r == 0 && c == 0)
-                System.out.print(" S ");
+            // PLAYER
+            if (r == playerRow && c == playerCol)
+                System.out.print(" P ");
+
+            // EXIT
             else if (r == rows - 1 && c == cols - 1)
                 System.out.print(" E ");
+
             else
                 System.out.print("   ");
 
-            // Right wall
             if (maze[r][c].right)
                 System.out.print("│");
             else
@@ -102,7 +150,6 @@ public class MazeGenerator {
 
         System.out.println();
 
-        // Bottom walls
         if (r < rows - 1) {
 
             System.out.print("├");
@@ -122,7 +169,6 @@ public class MazeGenerator {
         }
     }
 
-    // Bottom border
     System.out.print("└");
     for (int c = 0; c < cols; c++) {
         System.out.print("───");
@@ -132,9 +178,9 @@ public class MazeGenerator {
     System.out.println("┘");
 }
 
-    public static void main(String[] args) {
-        rows = 5;
-        cols = 5;
+    public static void runMaze() {
+        rows = 10;
+        cols = 15;
         maze = new Cell[rows][cols];
 
         for(int i=0;i<rows;i++){
@@ -144,6 +190,9 @@ public class MazeGenerator {
         }
 
         generator(0,0);
-        printMaze();
+        addLoops((rows * cols) / 3); //Increase the number to make the maze easier 
+        // printMaze();
+        MazeEngine engine = new MazeEngine(); 
+        engine.startGame();
     }
 }
