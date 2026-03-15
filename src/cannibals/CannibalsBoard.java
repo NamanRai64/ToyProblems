@@ -19,7 +19,7 @@ public class CannibalsBoard {
 
         System.out.println("+----------------------------------------------------------------------------------+");
         System.out.println("                                                                                    ");
-        System.out.println("     " + mleft + "M" + cleft + "C" + "                                                                 " + mright + "M" + cright + "C" + "     |");
+        System.out.println("     " + mleft + "M" + cleft + "C" + "                                                                 " + mright + "M" + cright + "C" + "     ");
         System.out.println("                                                                                    ");
 
         if (onLeft) {
