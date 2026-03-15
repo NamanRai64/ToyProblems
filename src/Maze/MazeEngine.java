@@ -58,4 +58,5 @@ public class MazeEngine {
         else if (m == 'D' && cell.right)
             System.out.println("You cannot move right.");
     }
+    
 }
